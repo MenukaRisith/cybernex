@@ -71,10 +71,10 @@ CineSphere is a fully functional and responsive movie ticket reservation website
 4. **Set up the database:**
 
     - Create your MySQL database using the credentials you defined.
-    - **Important:** After creating the database, import the `db.sql` file included in this project to populate it with dummy data:
+    - **Important:** Use the provided `init.sql` file to automatically create the database schema, tables, and import dummy data:
 
     ```bash
-    mysql -u your_database_user -p your_database_name < db.sql
+    mysql -u your_database_user -p your_database_name < init.sql
     ```
 
 5. **Run the development server:**
@@ -94,7 +94,7 @@ CineSphere is a fully functional and responsive movie ticket reservation website
 * Ensure MySQL is running and accessible with the provided credentials.
 * Obtain an OMDb API key from [http://www.omdbapi.com/apikey.aspx](http://www.omdbapi.com/apikey.aspx).
 * The `SESSION_SECRET` should be a randomly generated, long string for security.
-* The database schema and initial data setup are included in the `db.sql` file.
+* The database schema and initial data setup are included in the `init.sql` file.
 
 ---
 
