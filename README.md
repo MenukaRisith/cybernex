@@ -89,6 +89,23 @@ CineSphere is a fully functional and responsive movie ticket reservation website
 
 ---
 
+## 🔑 Admin Panel Access
+
+Manage all bookings, movies, showtimes, and seats from a single place.
+
+**Admin URL:** [https://cinesphere.eleventastic.com/admin](https://cinesphere.eleventastic.com/admin)
+
+**Credentials:**
+```Username: admin 
+Password: admin2008!! 
+```
+
+> 🛡️ Note: These credentials are set in your `init.sql` file and are securely stored with bcrypt hashing.
+> For production, always ensure you update to strong unique passwords.
+
+🌐 **Live Demo:** [https://cinesphere.eleventastic.com](https://cinesphere.eleventastic.com)
+
+
 ## 📝 Notes
 
 * Ensure MySQL is running and accessible with the provided credentials.

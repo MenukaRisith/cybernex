@@ -65,7 +65,7 @@ CREATE TABLE bookings (
 -- -------------------------------
 
 INSERT INTO admins (username, password_hash) VALUES
-('admin', '$2b$10$59CYarPUJpAIbYh5IYj24upadnFjzIKe/Zn8u4Dcgw2FZK8mvro/W');
+('admin', '$2b$10$qjhV9jew1fY/idK1abi/e.KAHqVOPSKIT5T0UzRrUZJNxigbhW2ZG');
 
 INSERT INTO users (id, name, email, phone) VALUES
 (3, 'Menuka Risith Rupalal', 'menuka.contact@gmail.com', '0760017055');
