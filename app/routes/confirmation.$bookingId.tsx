@@ -110,7 +110,6 @@ export default function ConfirmationPage() {
         </div>
       </div>
 
-      {/* Actions */}
       <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
         <button
           onClick={handlePrint}

@@ -41,20 +41,20 @@ CineSphere is a fully functional and responsive movie ticket reservation website
 
 ## 💻 How to Run the Project
 
-1.  **Clone the project:**
+1. **Clone the project:**
 
     ```bash
-    git clone [https://github.com/your-repo/cinesphere.git](https://github.com/your-repo/cinesphere.git)
+    git clone https://github.com/your-repo/cinesphere.git
     cd cinesphere
     ```
 
-2.  **Install dependencies:**
+2. **Install dependencies:**
 
     ```bash
     npm install
     ```
 
-3.  **Configure environment variables:**
+3. **Configure environment variables:**
 
     Create a `.env` file in the project's root directory with the following variables:
 
@@ -63,20 +63,29 @@ CineSphere is a fully functional and responsive movie ticket reservation website
     DB_USER=your_database_user
     DB_PASSWORD=your_database_password
     DB_NAME=your_database_name
-    OMDB_API_KEY=your_omdb_api_key (use this for now = 5666252d)
+    OMDB_API_KEY=5666252d
     ```
 
-    Replace the placeholders with your actual database credentials, OMDb API key, and a secure session secret.
+    Replace the placeholders with your actual database credentials and your OMDb API key.
 
-4.  **Run the development server:**
+4. **Set up the database:**
+
+    - Create your MySQL database using the credentials you defined.
+    - **Important:** After creating the database, import the `db.sql` file included in this project to populate it with dummy data:
+
+    ```bash
+    mysql -u your_database_user -p your_database_name < db.sql
+    ```
+
+5. **Run the development server:**
 
     ```bash
     npm run dev
     ```
 
-5.  **Visit the app:**
+6. **Visit the app:**
 
-    Open `http://localhost:5173` in your web browser.
+    Open [http://localhost:5173](http://localhost:5173) in your web browser.
 
 ---
 
@@ -85,7 +94,7 @@ CineSphere is a fully functional and responsive movie ticket reservation website
 * Ensure MySQL is running and accessible with the provided credentials.
 * Obtain an OMDb API key from [http://www.omdbapi.com/apikey.aspx](http://www.omdbapi.com/apikey.aspx).
 * The `SESSION_SECRET` should be a randomly generated, long string for security.
-* The database schema and initial data setup should be handled according to your project's specifications.
+* The database schema and initial data setup are included in the `db.sql` file.
 
 ---
 

@@ -66,7 +66,6 @@ export const loader: LoaderFunction = async ({ params }) => {
     }
   }
 
-  // Auto-fetch trailer from YouTube
   let trailerUrl = "";
   try {
     const query = `${movie.title} Official Trailer`;

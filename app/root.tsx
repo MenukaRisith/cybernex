@@ -27,19 +27,24 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
-        <Header />
-        {children}
+      <body className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        {/* Flex container for full page height */}
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </div>
         <ScrollRestoration />
         <Scripts />
-    <Footer />
       </body>
     </html>
   );

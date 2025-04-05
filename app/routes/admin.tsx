@@ -26,6 +26,7 @@ interface Movie {
   release_date: string;
   poster_url: string;
 }
+
 interface Booking {
   id: number;
   seat_ids: string;
@@ -35,6 +36,7 @@ interface Booking {
   name: string | null;
   email: string | null;
 }
+
 interface Showtime {
   id: number;
   movie_id: number;
@@ -42,6 +44,7 @@ interface Showtime {
   theater_name: string;
   title: string;
 }
+
 interface Seat {
   id: number;
   seat_number: string;
@@ -49,6 +52,7 @@ interface Seat {
   is_booked: 0 | 1;
   showtime_id: number;
 }
+
 interface AdminLoaderData {
   loggedIn: boolean;
   username: string;
@@ -214,6 +218,13 @@ export default function AdminPanel() {
       {tab === "movies" && (
         <div className="space-y-4">
           <h2 className="text-xl font-semibold">Movies</h2>
+          <Form method="post" className="bg-white dark:bg-gray-800 p-4 rounded shadow space-y-2">
+            <input name="title" placeholder="Title" required className="w-full p-2 rounded bg-gray-100 dark:bg-gray-700" />
+            <input name="genre" placeholder="Genre" required className="w-full p-2 rounded bg-gray-100 dark:bg-gray-700" />
+            <input name="release_date" type="date" required className="w-full p-2 rounded bg-gray-100 dark:bg-gray-700" />
+            <input name="poster_url" placeholder="Poster URL" required className="w-full p-2 rounded bg-gray-100 dark:bg-gray-700" />
+            <button type="submit" name="_action" value="addMovie" className="bg-blue-600 text-white px-4 py-2 rounded w-full">Add Movie</button>
+          </Form>
           {movies.map((m) => (
             <div key={m.id} className="p-4 bg-white dark:bg-gray-800 rounded shadow">
               <h3 className="font-bold">{m.title}</h3>
@@ -227,6 +238,17 @@ export default function AdminPanel() {
       {tab === "showtimes" && (
         <div className="space-y-4">
           <h2 className="text-xl font-semibold">Showtimes</h2>
+          <Form method="post" className="bg-white dark:bg-gray-800 p-4 rounded shadow space-y-2">
+            <select name="movie_id" required className="w-full p-2 rounded bg-gray-100 dark:bg-gray-700">
+              <option value="">Select Movie</option>
+              {movies.map((m) => (
+                <option key={m.id} value={m.id}>{m.title}</option>
+              ))}
+            </select>
+            <input name="datetime" type="datetime-local" required className="w-full p-2 rounded bg-gray-100 dark:bg-gray-700" />
+            <input name="theater_name" placeholder="Theater Name" required className="w-full p-2 rounded bg-gray-100 dark:bg-gray-700" />
+            <button type="submit" name="_action" value="addShowtime" className="bg-blue-600 text-white px-4 py-2 rounded w-full">Add Showtime</button>
+          </Form>
           {showtimes.map((s) => (
             <div key={s.id} className="p-4 bg-white dark:bg-gray-800 rounded shadow">
               <p>{s.title}</p>
@@ -240,6 +262,20 @@ export default function AdminPanel() {
       {tab === "seats" && (
         <div className="space-y-4">
           <h2 className="text-xl font-semibold">Seats</h2>
+          <Form method="post" className="bg-white dark:bg-gray-800 p-4 rounded shadow space-y-2">
+            <select name="showtime_id" required className="w-full p-2 rounded bg-gray-100 dark:bg-gray-700">
+              <option value="">Select Showtime</option>
+              {showtimes.map((s) => (
+                <option key={s.id} value={s.id}>{s.title} — {new Date(s.datetime).toLocaleString()}</option>
+              ))}
+            </select>
+            <input name="seat_number" placeholder="Seat Number (e.g., A1)" required className="w-full p-2 rounded bg-gray-100 dark:bg-gray-700" />
+            <select name="seat_type" required className="w-full p-2 rounded bg-gray-100 dark:bg-gray-700">
+              <option value="standard">Standard</option>
+              <option value="vip">VIP</option>
+            </select>
+            <button type="submit" name="_action" value="addSeat" className="bg-blue-600 text-white px-4 py-2 rounded w-full">Add Seat</button>
+          </Form>
           {seats.map((s) => (
             <div key={s.id} className="p-2 bg-white dark:bg-gray-800 rounded shadow">
               <p>Seat {s.seat_number} ({s.seat_type}) — {s.is_booked ? "Booked" : "Available"} (Showtime ID: {s.showtime_id})</p>
