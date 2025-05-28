@@ -2,6 +2,34 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import NavBar from "~/components/NavBar";
 import FooterSection from "~/components/Footer";
+import type { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Register | CyberNex 2025 – ICT Day Event" },
+    {
+      name: "description",
+      content:
+        "Register for CyberNex 2025 – the North Central Province’s biggest ICT Day event. Join competitions in coding, design, quizzes, and eSports. Open for Grades 6–13.",
+    },
+    { property: "og:title", content: "CyberNex 2025 – Register Now" },
+    {
+      property: "og:description",
+      content:
+        "Be a part of Sri Lanka's leading school tech event! Register now for coding, design, quiz, and gaming competitions at CyberNex.",
+    },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "CyberNex 2025 – Register Now" },
+    {
+      name: "twitter:description",
+      content:
+        "CyberNex is calling all school tech talents! Secure your spot in the region's most thrilling ICT Day event competitions.",
+    },
+  ];
+};
+
+
 
 const categoryLogos: Record<string, string> = {
   codexa: "/images/comp/codexa.svg",
@@ -36,7 +64,6 @@ export default function RegisterPage() {
       <NavBar />
 
       <div className="relative min-h-screen mt-10 bg-[#0d0d14] font-[DM_SANS]">
-        {/* Vector background */}
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -45,10 +72,8 @@ export default function RegisterPage() {
             backgroundSize: "auto",
           }}
         />
-        {/* Dark overlay */}
         <div className="absolute inset-0 bg-[#0d0d14]/80 z-10" />
 
-        {/* Main Content */}
         <main className="relative z-20 px-4 py-20 flex items-start justify-center text-white">
           <motion.section
             initial={{ opacity: 0, y: 50 }}
@@ -65,7 +90,6 @@ export default function RegisterPage() {
                 Register for CyberNex
               </h1>
 
-              {/* Category Buttons */}
               <div className="flex flex-wrap justify-center gap-2 mb-6">
                 {[
                   { label: "Codexa", value: "codexa" },
@@ -88,7 +112,6 @@ export default function RegisterPage() {
                 ))}
               </div>
 
-              {/* Registration Form */}
               <form
                 className="space-y-5"
                 encType="multipart/form-data"
@@ -188,9 +211,8 @@ export default function RegisterPage() {
                   </>
                 )}
 
-                {category !== "quiz" && (
-                  <FileInput name="schoolLogo" label="School Logo" accept="image/*" required />
-                )}
+                {/* 🔄 Universal school logo field for all categories */}
+                <FileInput name="schoolLogo" label="School Logo" accept="image/*" required />
 
                 <div className="flex items-center gap-2 pt-2">
                   <input type="checkbox" required className="accent-blue-500" />
@@ -235,12 +257,14 @@ export default function RegisterPage() {
           </motion.section>
         </main>
       </div>
+
       <FooterSection />
     </>
   );
 }
 
 /* ----------------- Reusable Components ----------------- */
+
 function Input({
   name,
   label,
