@@ -9,9 +9,6 @@ import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
 
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -33,15 +30,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
+
+        {/* FontAwesome via your CDN Kit */}
+        <script
+          src="https://kit.fontawesome.com/f966c5c9b1.js"
+          crossOrigin="anonymous"
+        ></script>
       </head>
-      <body className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-        {/* Flex container for full page height */}
+      <body className="bg-gray-100 dark:bg-[#0D0D14] text-gray-900 dark:text-gray-100">
         <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
+          <main className="flex-grow">{children}</main>
         </div>
         <ScrollRestoration />
         <Scripts />

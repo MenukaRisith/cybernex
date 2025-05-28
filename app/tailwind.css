@@ -10,3 +10,9 @@ body {
     color-scheme: dark;
   }
 }
+
+.radial-bg {
+  background: radial-gradient(circle,
+      #0A1833 0%,
+      #0A101F 100%);
+}
