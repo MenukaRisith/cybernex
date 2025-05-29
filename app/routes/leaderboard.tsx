@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import NavBar from "~/components/NavBar";
 import FooterSection from "~/components/Footer";
+import type { MetaFunction } from "@remix-run/node";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Leaderboard – CyberNex 2025" },
+  ];
+};
 
 interface LeaderboardEntry {
   majorWins: string;
