@@ -4,7 +4,6 @@ import FooterSection from "~/components/Footer";
 import { Link } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 
-
 export const meta: MetaFunction = () => {
   return [
     { title: "Pixora – CyberNex 2025 | Visual Creativity Challenge" },
@@ -29,7 +28,6 @@ export const meta: MetaFunction = () => {
     },
   ];
 };
-
 
 export default function PixoraPage() {
   return (
@@ -60,12 +58,22 @@ export default function PixoraPage() {
           <p className="max-w-2xl text-gray-300 text-sm md:text-lg leading-relaxed mb-8">
             Enter the realm of creativity with Poster Design and Photo Manipulation events. Unleash your vision under the theme: “AI Heroes: Saving the World with Technology.”
           </p>
-          <Link
-            to="/register"
-            className="bg-white hover:bg-gray-200 text-black px-6 py-2 rounded-md font-medium transition"
-          >
-            Register Now
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              to="/register"
+              className="bg-white hover:bg-gray-200 text-black px-6 py-2 rounded-md font-medium transition"
+            >
+              Register Now
+            </Link>
+            <a
+              href="https://chat.whatsapp.com/your-group-invite-link" // Replace with your actual WhatsApp group link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition"
+            >
+              Join WhatsApp Group
+            </a>
+          </div>
         </section>
 
         {/* Details Section */}

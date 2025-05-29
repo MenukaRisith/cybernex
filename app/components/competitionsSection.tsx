@@ -59,7 +59,7 @@ export default function CompetitionsSection() {
       : competitions.filter((c) => c.category === selected);
 
   return (
-    <section className="relative w-full flex flex-col items-center text-white py-16 px-4 overflow-hidden">
+    <section id="competitions" className="relative w-full flex flex-col items-center text-white py-16 px-4 overflow-hidden">
       <div className="relative z-10 w-full flex flex-col items-center">
         <h2 className="text-[28px] md:text-[40px] font-[Montserrat] font-bold uppercase text-center mb-3">
           COMPETITIONS

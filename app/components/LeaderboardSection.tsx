@@ -21,7 +21,7 @@ export default function LeaderboardSection() {
   const topFive = entries.slice(0, 5);
 
   return (
-    <section className="flex flex-col items-center justify-center py-10 px-4 text-white font-[DM_SANS]">
+    <section id="leaderboard" className="flex flex-col items-center justify-center py-10 px-4 text-white font-[DM_SANS]">
       <div className="text-center max-w-[1440px] w-full mb-8">
         <h2 className="text-[32px] md:text-[44px] font-bold uppercase font-[Montserrat]">Leaderboard</h2>
         <p className="text-xs md:text-sm font-[DM_SANS] font-medium max-w-[860px] mx-auto mt-2">
@@ -73,7 +73,7 @@ export default function LeaderboardSection() {
         onClick={() => navigate("/leaderboard")}
         className="mt-6 flex items-center gap-2 px-5 py-2 border border-white/25 rounded-[8px] bg-[#4d76f4]/10 hover:bg-[#4d76f4]/20 transition"
       >
-        <i className="fas fa-right-left text-white text-sm md:text-base"></i>
+        <i className="fas fa-expand text-white text-sm md:text-base"></i>
         <p className="text-xs md:text-sm font-medium uppercase text-white">See full leaderboard</p>
       </button>
     </section>

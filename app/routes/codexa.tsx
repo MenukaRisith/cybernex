@@ -60,12 +60,22 @@ export default function CodexaPage() {
             Participate in Web Development, Game Development, or Algorithmic Problem Solving.
             Showcase your talent and stand out as a future tech leader.
           </p>
-          <Link
-            to="/register"
-            className="bg-white hover:bg-gray-200 text-black px-6 py-2 rounded-md font-medium transition"
-          >
-            Register Now
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              to="/register"
+              className="bg-white hover:bg-gray-200 text-black px-6 py-2 rounded-md font-medium transition"
+            >
+              Register Now
+            </Link>
+            <a
+              href="https://chat.whatsapp.com/your-group-invite-link" // Replace with your real WhatsApp group link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition"
+            >
+              Join WhatsApp Group
+            </a>
+          </div>
         </section>
 
         {/* Tracks */}

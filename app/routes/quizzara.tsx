@@ -29,7 +29,6 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-
 export default function QuizzaraPage() {
   return (
     <>
@@ -59,12 +58,22 @@ export default function QuizzaraPage() {
           <p className="max-w-2xl text-gray-300 text-sm md:text-lg leading-relaxed mb-8">
             Face off in an electrifying battle of knowledge as teams compete in rounds covering ICT, technology, innovation, and general knowledge. Fast thinking. Sharp minds. One winner.
           </p>
-          <Link
-            to="/register"
-            className="bg-white hover:bg-gray-200 text-black px-6 py-2 rounded-md font-medium transition"
-          >
-            Register Now
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              to="/register"
+              className="bg-white hover:bg-gray-200 text-black px-6 py-2 rounded-md font-medium transition"
+            >
+              Register Now
+            </Link>
+            <a
+              href="https://chat.whatsapp.com/your-group-invite-link" // Replace this with your actual WhatsApp group link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition"
+            >
+              Join WhatsApp Group
+            </a>
+          </div>
         </section>
 
         {/* Rules Section */}

@@ -11,19 +11,19 @@ export default function ContactSection() {
       phone: "+94 76 744 2129",
     },
     {
-      role: "Secretary",
-      name: "Sethuli Thalgodapitiya",
-      phone: "+94 71 123 4567",
+      role: "Coordinator",
+      name: "Nehara Kavisha",
+      phone: "+94 70 413 4979",
     },
     {
-      role: "Treasurer",
-      name: "Pisara Chethiya",
-      phone: "+94 75 987 6543",
+      role: "Coordinator",
+      name: "Rumitha Yethmin",
+      phone: "+94 70 225 1256",
     },
   ];
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-16 px-4 text-white">
+    <section id="contact" className="w-full flex flex-col items-center justify-center py-16 px-4 text-white">
       <h2 className="text-[32px] md:text-[44px] font-[Montserrat] font-bold text-center uppercase mb-12">
         COMMITTEE
       </h2>

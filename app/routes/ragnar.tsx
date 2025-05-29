@@ -75,7 +75,7 @@ export default function RagnarPage() {
               Battle it out in CyberNex’s most intense multiplayer gaming event. Compete with your school team in a fair, exciting and disciplined arena.
             </motion.p>
             <motion.div
-              className="mt-8"
+              className="mt-8 flex flex-col md:flex-row gap-4 items-center justify-center"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
@@ -86,6 +86,14 @@ export default function RagnarPage() {
               >
                 Register Now
               </Link>
+              <a
+                href="https://chat.whatsapp.com/your-group-invite-link" // Replace this with your actual WhatsApp group link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-semibold transition"
+              >
+                Join WhatsApp Group
+              </a>
             </motion.div>
           </section>
 

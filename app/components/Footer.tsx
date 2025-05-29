@@ -24,7 +24,7 @@ export default function FooterSection() {
           <div className="max-w-[360px] space-y-3">
             <p className="text-xl font-bold uppercase">Address</p>
             <p className="text-[#b5b5b5] text-base leading-snug">
-              ICT Society,<br></br>Central College,<br></br>Kekirawa.
+              ICT Society,<br />Central College,<br />Kekirawa.
             </p>
           </div>
 
@@ -53,9 +53,11 @@ export default function FooterSection() {
 
         {/* Bottom Row */}
         <div className="flex justify-between items-center flex-wrap gap-4">
-          <p className="text-base text-[#b5b5b5]">Copyright © 2025</p>
+          <p className="text-base text-[#b5b5b5]">
+            © {new Date().getFullYear()} Kekirawa Central College ICT Society. All rights reserved.
+          </p>
           <div className="flex gap-4 text-[#989899] text-xl">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+            <a href="https://linkedin.com/company/kccicts" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
               <i className="fab fa-linkedin-in"></i>
             </a>
             <a href="https://instagram.com/kccicts" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
