@@ -50,7 +50,7 @@ export default function Deadline() {
           { label: "Seconds", value: timeLeft.seconds },
         ].map((unit) => (
           <div key={unit.label} className="w-[110px] h-[130px] relative">
-            <p className="text-[44px] md:text-[72px] text-[#0068FE] font-bold leading-tight">
+            <p className="text-[44px] md:text-[80px] mt-8 text-[#0068FE] font-bold leading-tight">
               {String(unit.value).padStart(2, "0")}
             </p>
             <p className="text-[16px] md:text-[20px] font-medium uppercase mt-2">

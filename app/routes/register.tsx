@@ -219,7 +219,7 @@ export default function RegisterPage() {
                   <p className="text-sm text-gray-400">
                     By submitting this form, I agree to all{" "}
                     <a
-                      href="/rules.pdf"
+                      href="/doc/CyberNex25_RnR.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:underline"

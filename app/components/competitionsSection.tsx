@@ -59,14 +59,19 @@ export default function CompetitionsSection() {
       : competitions.filter((c) => c.category === selected);
 
   return (
-    <section id="competitions" className="relative w-full flex flex-col items-center text-white py-16 px-4 overflow-hidden">
+    <section
+      id="competitions"
+      className="relative w-full flex flex-col items-center text-white py-16 px-4 overflow-hidden"
+    >
       <div className="relative z-10 w-full flex flex-col items-center">
         <h2 className="text-[28px] md:text-[40px] font-[Montserrat] font-bold uppercase text-center mb-3">
           COMPETITIONS
         </h2>
 
         <p className="w-full max-w-[720px] text-sm md:text-base font-[DM_SANS] font-medium text-center text-white/90 mb-8">
-          CyberNex, organized by the ICT Society of Kekirawa Central College, is the first-ever ICT Day in the North Central Province, featuring dynamic competitions that challenge creativity, coding, design, and gaming skills.
+          CyberNex, organized by the ICT Society of Kekirawa Central College, is the first-ever ICT
+          Day in the North Central Province, featuring dynamic competitions that challenge
+          creativity, coding, design, and gaming skills.
         </p>
 
         {/* Filter Menu */}
@@ -136,7 +141,11 @@ export default function CompetitionsSection() {
                     e.currentTarget.style.opacity = "1";
                   }}
                 >
-                  <i className="fas fa-info text-[#121100] text-[18px]" />
+                  <img
+                    src="/images/info-circle.svg"
+                    alt="Info"
+                    className="w-[28px] h-[28px]"
+                  />
                 </button>
               </div>
             </div>
