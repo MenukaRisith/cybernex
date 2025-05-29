@@ -68,7 +68,7 @@ export default function CodexaPage() {
               Register Now
             </Link>
             <a
-              href="https://chat.whatsapp.com/your-group-invite-link" // Replace with your real WhatsApp group link
+              href="https://chat.whatsapp.com/K2ULz24Ioby1FDqW8xHsz9" // Replace with your real WhatsApp group link
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition"

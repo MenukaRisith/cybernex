@@ -66,7 +66,7 @@ export default function QuizzaraPage() {
               Register Now
             </Link>
             <a
-              href="https://chat.whatsapp.com/your-group-invite-link" // Replace this with your actual WhatsApp group link
+              href="https://chat.whatsapp.com/FBZ4a4sX7U7DMtYga0H25T" // Replace this with your actual WhatsApp group link
               target="_blank"
               rel="noopener noreferrer"
               className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md font-medium transition"

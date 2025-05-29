@@ -1,16 +1,28 @@
 import { useState } from "react";
-import { NavLink } from "@remix-run/react";
+import { NavLink, useNavigate, useLocation } from "@remix-run/react";
 
 const links = [
   { name: "Home", to: "/" },
   { name: "About", to: "/about" },
-  { name: "Competitions", to: "/#competitions", anchor: true },
-  { name: "Leaderboard", to: "/#leaderboard", anchor: true },
-  { name: "Contact", to: "/#contact", anchor: true },
+  { name: "Competitions", to: "#competitions", anchor: true },
+  { name: "Leaderboard", to: "#leaderboard", anchor: true },
+  { name: "Contact", to: "#contact", anchor: true },
 ];
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleAnchorClick = (hash: string) => {
+    setMenuOpen(false);
+    if (location.pathname !== "/") {
+      navigate(`/${hash}`);
+    } else {
+      const el = document.querySelector(hash);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <nav className="absolute font-[Montserrat] top-6 left-0 w-full z-50 px-6 md:px-8 py-4">
@@ -19,13 +31,13 @@ export default function NavBar() {
         <div className="hidden md:flex justify-center items-center gap-12">
           {links.map((link) =>
             link.anchor ? (
-              <a
+              <button
                 key={link.to}
-                href={link.to}
+                onClick={() => handleAnchorClick(link.to)}
                 className="text-white uppercase text-base tracking-wider font-semibold transition duration-200 opacity-80 hover:opacity-100"
               >
                 {link.name}
-              </a>
+              </button>
             ) : (
               <NavLink
                 key={link.to}
@@ -56,14 +68,13 @@ export default function NavBar() {
         <div className="mt-4 md:hidden flex flex-col items-center gap-4 bg-[#0d0d14]/80 py-6 rounded-lg backdrop-blur-md border border-white/10">
           {links.map((link) =>
             link.anchor ? (
-              <a
+              <button
                 key={link.to}
-                href={link.to}
-                onClick={() => setMenuOpen(false)}
+                onClick={() => handleAnchorClick(link.to)}
                 className="text-white uppercase text-sm font-semibold tracking-wide transition duration-200 opacity-80 hover:opacity-100"
               >
                 {link.name}
-              </a>
+              </button>
             ) : (
               <NavLink
                 key={link.to}
