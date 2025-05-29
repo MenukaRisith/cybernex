@@ -58,8 +58,11 @@ export default function FooterSection() {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-              <i className="fab fa-youtube"></i>
+            <a href="https://instagram.com/kccicts" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com/kccicts" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+              <i className="fab fa-facebook"></i>
             </a>
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function LeaderboardSection() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("/leaderboard.json")
+    fetch("/data/leaderboard.json")
       .then((res) => res.json())
       .then((data) => setEntries(data))
       .catch((err) => console.error("Failed to load leaderboard:", err));
